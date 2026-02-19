@@ -1,0 +1,220 @@
+/* src/assets/global.css
+   Import file ini di main.js: import './assets/global.css'
+   Pastikan juga @import 'tailwindcss' sudah ada di sini atau di file css terpisah.
+*/
+
+@import "tailwindcss";
+
+/* ── Google Fonts ─────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap");
+
+/* ── CSS Variables ────────────────────────────── */
+:root {
+  --neon: #39ff14;
+  --dark-950: #050a05;
+  --dark-900: #080f08;
+  --dark-800: #0c160c;
+  --dark-700: #111c11;
+}
+
+/* ── Base ─────────────────────────────────────── */
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: var(--neon) var(--dark-950);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--dark-950);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--neon);
+  border-radius: 2px;
+}
+
+body {
+  background-color: var(--dark-950);
+  color: #e8f5e8;
+  font-family: "Syne", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ── Grid background ──────────────────────────── */
+body {
+  background-image:
+    linear-gradient(rgba(57, 255, 20, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 255, 20, 0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* ── Typography helpers ───────────────────────── */
+.font-display {
+  font-family: "Syne", sans-serif;
+}
+.font-mono {
+  font-family: "Space Mono", monospace;
+}
+
+/* ── Neon utilities ───────────────────────────── */
+.neon-text {
+  color: var(--neon);
+  text-shadow:
+    0 0 10px var(--neon),
+    0 0 20px var(--neon),
+    0 0 40px rgba(57, 255, 20, 0.5);
+}
+
+.neon-btn {
+  background: var(--neon);
+  color: var(--dark-950);
+  box-shadow:
+    0 0 15px rgba(57, 255, 20, 0.6),
+    0 0 30px rgba(57, 255, 20, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.neon-btn:hover {
+  box-shadow:
+    0 0 25px rgba(57, 255, 20, 0.9),
+    0 0 50px rgba(57, 255, 20, 0.5);
+  transform: translateY(-2px);
+}
+
+/* ── Glass card ───────────────────────────────── */
+.glass-card {
+  background: rgba(12, 22, 12, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(57, 255, 20, 0.15);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(57, 255, 20, 0.1);
+  transition: all 0.3s ease;
+}
+.glass-card:hover {
+  border-color: rgba(57, 255, 20, 0.35);
+  box-shadow: 0 8px 32px rgba(57, 255, 20, 0.1);
+}
+
+/* ── Orb (glow blob) ──────────────────────────── */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* ── Progress bar ─────────────────────────────── */
+.progress-bar {
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--neon), #84cc16);
+  box-shadow: 0 0 8px rgba(57, 255, 20, 0.6);
+  transition: width 1.5s ease;
+}
+
+/* ── Portfolio card ───────────────────────────── */
+.portfolio-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.portfolio-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(57, 255, 20, 0.15);
+}
+
+/* ── Timeline dot ─────────────────────────────── */
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  background: var(--neon);
+  border-radius: 50%;
+  box-shadow:
+    0 0 10px var(--neon),
+    0 0 20px rgba(57, 255, 20, 0.5);
+  flex-shrink: 0;
+}
+
+/* ── Contact inputs ───────────────────────────── */
+.contact-input {
+  background: rgba(12, 22, 12, 0.8);
+  border: 1px solid rgba(57, 255, 20, 0.2);
+  color: #e8f5e8;
+  font-family: "Space Mono", monospace;
+  transition: all 0.3s ease;
+}
+.contact-input:focus {
+  outline: none;
+  border-color: var(--neon);
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.2);
+}
+.contact-input::placeholder {
+  color: rgba(57, 255, 20, 0.3);
+}
+
+/* ── Animations ───────────────────────────────── */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+.float-anim {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes scanLine {
+  0% {
+    top: -10%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+.scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(57, 255, 20, 0.3),
+    transparent
+  );
+  animation: scanLine 6s linear infinite;
+  pointer-events: none;
+}
+
+/* ── Vue transitions ──────────────────────────── */
+.slide-down-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-down-leave-active {
+  transition: all 0.2s ease;
+}
+.slide-down-enter-from,
+.slide-down-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}

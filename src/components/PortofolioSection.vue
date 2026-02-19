@@ -108,6 +108,14 @@
 import { ref, computed } from "vue";
 import { Motion } from "@motionone/vue";
 
+import billing from "../assets/porto/billing.png";
+import emet from "../assets/porto/emet.png";
+import rekamMedis from "../assets/porto/rekamMedis.png";
+import pelaporanPekerjaan from "../assets/porto/pelaporanPekerjaan.png";
+import movieMeter from "../assets/porto/movieMeter.png";
+import simPel from "../assets/porto/simPel.png";
+import rpl from "../assets/porto/rpl.png";
+
 const activeFilter = ref("Semua");
 
 const projects = [
@@ -121,7 +129,7 @@ const projects = [
     demo: "#",
     github: "#",
     bg: "linear-gradient(135deg, #0a0c1a, #0f152d, #080a16)",
-    image: "/src/assets/porto/billing.png",
+    image: billing,
   },
   {
     id: 2,
@@ -142,7 +150,7 @@ const projects = [
     demo: "#",
     github: "#",
     bg: "linear-gradient(135deg, #0c1a0c, #0f2d0f, #0a160a)",
-    image: "/src/assets/porto/emet.png",
+    image: emet,
   },
   {
     id: 3,
@@ -154,7 +162,7 @@ const projects = [
     demo: "#",
     github: "#",
     bg: "linear-gradient(135deg, #1a0c0c, #2d0f0f, #160a0a)",
-    image: "/src/assets/porto/rekamMedis.png",
+    image: rekamMedis,
   },
   {
     id: 4,
@@ -166,7 +174,7 @@ const projects = [
     demo: "#",
     github: "#",
     bg: "linear-gradient(135deg, #0c1a18, #0f2d28, #0a1614)",
-    image: "/src/assets/porto/pelaporanPekerjaan.png",
+    image: pelaporanPekerjaan,
   },
   {
     id: 5,
@@ -175,7 +183,7 @@ const projects = [
       "Platform rekomendasi film berdasarkan rating pengguna dengan fitur pencarian, ulasan, trailer dan filtering.",
     category: "Fullstack Dev",
     tags: ["Laravel", "Bootstrap", "MySQL"],
-    image: "/src/assets/porto/movieMeter.png",
+    image: movieMeter,
     demo: "#",
     github: "#",
     bg: "linear-gradient(135deg, #1a0c1a, #2d0f2d, #160a16)",
@@ -187,7 +195,7 @@ const projects = [
       "Design landing page aplikasi SimPel App dengan tampilan modern dan responsif.",
     category: "Frontend Dev",
     tags: ["HTML", "Tailwind CSS"],
-    image: "/src/assets/porto/simPel.png",
+    image: simPel,
     demo: "#",
     github: "#",
     bg: "linear-gradient(135deg, #1a1a0c, #2d2d0f, #16160a)",
@@ -199,7 +207,7 @@ const projects = [
       "Ketua Divisi Olahraga juruan Rekayasa Perangkat Lunak SMK Negeri 1 Cimahi Angkatan 49.",
     category: "Organisasi",
     // tags: ["HTML", "Tailwind CSS"],
-    image: "/src/assets/porto/image.png",
+    image: rpl,
     demo: "#",
     github: "#",
     bg: "linear-gradient(135deg, #1a1a0c, #2d2d0f, #16160a)",

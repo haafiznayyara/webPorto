@@ -51,7 +51,7 @@
                     </div>
                     <div>
                       <h3 class="font-display text-xl font-bold text-white">
-                        Tugas 1: Laporan Penelitian
+                        Tugas 2: Dokumen
                       </h3>
                       <div
                         class="font-mono text-xs text-[#39FF14]/50 tracking-wider"
@@ -72,7 +72,7 @@
                 <!-- Right: Button -->
                 <div class="flex items-center gap-3">
                   <a
-                    href="https://5c97a56f.portfolio-vue-77d.pages.dev/"
+                    href="https://drive.google.com/file/d/1TZXZZfV2tc1xuspxJ4ZZfGoM76HN6u8d/view?usp=sharing"
                     target="_blank"
                     class="neon-btn font-mono text-xs tracking-widest uppercase px-6 py-3 rounded-sm font-bold flex items-center gap-2 whitespace-nowrap"
                   >
@@ -121,28 +121,21 @@
                     </div>
                     <div>
                       <h3 class="font-display text-xl font-bold text-white">
-                        Tugas 1: Laporan Penelitian
+                        Tugas 3: Infografis
                       </h3>
                       <div
                         class="font-mono text-xs text-[#39FF14]/50 tracking-wider"
                       >
-                        DOCUMENT
+                        Image
                       </div>
                     </div>
                   </div>
-                  <p
-                    class="text-green-100/60 text-sm leading-relaxed mb-4 md:mb-0"
-                  >
-                    Laporan lengkap tentang analisis sistem dan rekomendasi
-                    implementasi teknologi terbaru untuk meningkatkan efisiensi
-                    proses bisnis.
-                  </p>
                 </div>
 
                 <!-- Right: Button -->
                 <div class="flex items-center gap-3">
                   <a
-                    href="https://drive.google.com/file/d/12ZLK7gagDn0F6oWuGsSehpqOKNLJCfpE/view?usp=drive_link"
+                    href=""
                     target="_blank"
                     class="neon-btn font-mono text-xs tracking-widest uppercase px-6 py-3 rounded-sm font-bold flex items-center gap-2 whitespace-nowrap"
                   >
@@ -193,23 +186,16 @@
               <div
                 class="relative rounded-lg overflow-hidden border-2 border-[#39FF14]/20 hover:border-[#39FF14]/40 transition-all duration-300 shadow-xl shadow-black/50 group"
               >
-                <!-- <video
+                <video
                   ref="videoPlayer"
                   class="w-full aspect-video bg-black"
                   controls
                   preload="metadata"
                   @click="togglePlay"
                 >
-                  <source
-                    src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                    type="video/mp4"
-                  />
-                  <source
-                    src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                    type="video/webm"
-                  />
+                  <source :src="vid" type="video/mp4" />
                   Browser Anda tidak mendukung video player.
-                </video> -->
+                </video>
               </div>
             </div>
           </div>
@@ -222,6 +208,7 @@
 <script setup>
 import { ref } from "vue";
 import { Motion } from "@motionone/vue";
+import vid from "../assets/porto/vid.mp4";
 
 const videoPlayer = ref(null);
 const isPlaying = ref(false);
